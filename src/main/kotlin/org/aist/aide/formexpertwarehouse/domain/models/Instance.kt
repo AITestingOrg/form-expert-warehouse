@@ -1,3 +1,5 @@
 package org.aist.aide.formexpertwarehouse.domain.models
 
-data class Instance(val label: String, val fields: List<Field>) : AuditModel()
+import org.springframework.data.annotation.Id
+
+data class Instance(@Id val id: String, val label: String, val fields: List<Field>) : AuditModel()
