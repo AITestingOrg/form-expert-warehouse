@@ -58,6 +58,7 @@ ext {
 }
 
 dependencies {
+    compile files("libs/form-expert-common-1.0.jar")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('com.fasterxml.jackson.module:jackson-module-kotlin')

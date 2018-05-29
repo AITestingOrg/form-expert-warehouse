@@ -67,7 +67,7 @@ class LabellerController @Autowired constructor(
         if (!inDb.isPresent) {
             return ResponseEntity(HttpStatus.NOT_FOUND)
         }
-        var warehouseInstance = Instance("", inDb.get().label, inDb.get().fields)
+        var warehouseInstance = Instance("", inDb.get().label, inDb.get().form)
         warehouseRepository.save(warehouseInstance)
         unlabelledRepository.delete(inDb.get())
         return ResponseEntity(HttpStatus.OK)

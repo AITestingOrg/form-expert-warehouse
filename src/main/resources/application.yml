@@ -1,7 +1,6 @@
 spring:
   application:
     name: formexpertwarehouse
-spring:
   data:
     mongodb:
       uri: mongodb://localhost/form_expert_warehouse # Mongo database URI. When set, host and port are ignored.
