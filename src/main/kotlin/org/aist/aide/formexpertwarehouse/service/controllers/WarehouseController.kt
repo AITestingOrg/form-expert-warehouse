@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController
 @RequestMapping("/api/v1/warehouse")
 class WarehouseController @Autowired constructor(private val warehouseRepository: WarehouseRepository) {
     @GetMapping("/page/{pageNum}/page-size/{pageSize}")
-    fun getAll(@PathVariable pageNum: Int, @PathVariable pageSize: Int) : List<Instance> {
+    fun getAll(@PathVariable pageNum: Int, @PathVariable pageSize: Int): List<Instance> {
         return warehouseRepository.findAll(PageRequest.of(pageNum, pageSize)).content
     }
 }
