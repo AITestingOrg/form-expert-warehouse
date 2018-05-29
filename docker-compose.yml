@@ -11,6 +11,7 @@ services:
       - mongo
     depends_on:
       - mongo
+
   mongo:
     image: mongo:latest
     environment:
@@ -22,7 +23,8 @@ services:
      - ./data/db:/data/db
     ports:
      - '27017:27017'
+
   discoveryservice:
     image: springcloud/eureka
     ports:
-- "8761:8761"
+      - "8761:8761"
