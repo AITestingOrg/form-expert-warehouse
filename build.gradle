@@ -30,7 +30,7 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: "org.jlleitschuh.gradle.ktlint"
 
 group = 'org.aist.aide'
-version = '0.0.1'
+version = '0.1'
 sourceCompatibility = 1.8
 compileKotlin {
 	kotlinOptions {
