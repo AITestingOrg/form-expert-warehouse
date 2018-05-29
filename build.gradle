@@ -4,13 +4,22 @@ buildscript {
 		springBootVersion = '2.0.2.RELEASE'
 	}
 	repositories {
-		mavenCentral()
+        jcenter()
+        maven {
+            2url "https://plugins.gradle.org/m2/"
+        }
+        mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+        classpath "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:4.0.0"
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
 	}
+}
+
+configurations {
+    ktlint
 }
 
 apply plugin: 'kotlin'
@@ -18,9 +27,10 @@ apply plugin: 'kotlin-spring'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: "org.jlleitschuh.gradle.ktlint"
 
 group = 'org.aist.aide'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 sourceCompatibility = 1.8
 compileKotlin {
 	kotlinOptions {
@@ -36,6 +46,7 @@ compileTestKotlin {
 }
 
 repositories {
+    jcenter()
 	mavenCentral()
 	maven { url "https://repo.spring.io/snapshot" }
 	maven { url "https://repo.spring.io/milestone" }
@@ -47,6 +58,7 @@ ext {
 }
 
 dependencies {
+    compile files("libs/form-expert-common-1.0.jar")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('com.fasterxml.jackson.module:jackson-module-kotlin')
@@ -61,3 +73,5 @@ dependencyManagement {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
+
+
