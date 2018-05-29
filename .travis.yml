@@ -7,8 +7,6 @@ matrix:
   include:
   - env: JDK='Oracle JDK 10'
     install: ". ./install-jdk.sh -F 10 -L BCL"
-before_script:
-- docker-compose up -d
 env:
   global:
   - secure: i5td07j8SrT+SSLAX+YPBYWWBcUwgtGTnZbpw2pPPK65H7+yFtRA9JzC3ZcwujIqqsEt7Wm7s/2h8Pm8YXHoTJaqVDcC41lzNTUQaQPkJwRmwPavsp6YP8YheK1j8jLxXpHNjLqNCr9+AE4UcIIocdzuDG1lSFYOQzJ4SPqExvxR8aIhfyE+uF8gxp7U0nQHiBapo7z0RyNTFf0nbZqhy9uCx0nTCLiKSLspnKIS59zhhhu093Ezmo4noTu6PZDT83R70FyV2i5kJR0UvonKeLBVaJ7e2DbnUJdHTJ+D2vlUIpWg85vDVDjh5OXSxo0TYCYsLAlJOI2DRe8buTVspS/cPDmMA9oMvXJyLsOcj8dvUmXyftkXId8DXVmMMoby9utSvjQEdqMN6WTcVLy7z/TlSEcFU/rcp2Q1iIZSLrFJkUBp7gDcbJ6IVOkiU1+1pIYzzJGnDRIkmvwM7Zv61knzsvk5rx/uNHJXwnQKCNzn2MCyhffNEjDafEbfIlE1KXS+FwJS9Ne+VvjTUkj7dSWYKnUncS3fcM2uipdIXjd0Eli3lUj1UggM8nyBWDxewflqEQGgwm7wHZ6kGXSrPgEWOvaS79mxLgYRkXJGQ5TJunGntqJOOdLGJGoxmzPlYARJOGcvx7D5B3WW8DHX6ATiFckhkYiw59wAW/li8HI=
