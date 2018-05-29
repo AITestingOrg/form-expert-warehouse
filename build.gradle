@@ -6,15 +6,15 @@ buildscript {
 	repositories {
         jcenter()
         maven {
-            url "https://plugins.gradle.org/m2/"
+            2url "https://plugins.gradle.org/m2/"
         }
-		mavenCentral()
+        mavenCentral()
 	}
 	dependencies {
         classpath "gradle.plugin.org.jlleitschuh.gradle:ktlint-gradle:4.0.0"
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-		classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
 	}
 }
 
