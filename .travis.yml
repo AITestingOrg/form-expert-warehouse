@@ -2,7 +2,6 @@ language: java
 
 sudo: required
 before_install:
-  - docker login -u=$DOCKER_USERNAME -p=$DOCKER_PASSWORD
   - wget https://github.com/sormuras/bach/raw/master/install-jdk.sh
 install: ". ./install-jdk.sh -F 10 -L GPL"
 
