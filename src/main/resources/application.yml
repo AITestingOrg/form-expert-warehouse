@@ -5,10 +5,9 @@ spring:
     mongodb:
       uri: mongodb://localhost/form_expert_warehouse # Mongo database URI. When set, host and port are ignored.
       port: 27017 # Mongo server port.
-      enabled: true # Enable Mongo repositories.
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
     register-with-eureka: false
-fetch-registry: false
+    fetch-registry: false
