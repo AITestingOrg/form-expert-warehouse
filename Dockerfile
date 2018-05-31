@@ -1,4 +1,4 @@
-FROM openjdk:10-jdk
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ENV SPRING_PROFILES_ACTIVE=dev
 ADD build/libs/form-expert-warehouse-0.1.jar app.jar
